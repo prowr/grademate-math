@@ -1,7 +1,7 @@
 <template>
     <b-navbar class="grademate-navbar" toggleable="lg" type="dark" variant="white">
-        <b-navbar-brand class="logo-text" href="/">
-            GradeMate 
+        <b-navbar-brand class="logo-text">
+            <router-link to="/">GradeMate</router-link>
             <b class="grademate-pop">
                 MATH
                 <em class="logo-icon mathematics" v-html="mathematicsIcon"></em>
@@ -9,7 +9,7 @@
             </b>
         </b-navbar-brand>
         <b-navbar-nav>
-            <b-nav-item class="grademate-nav-link">
+            <b-nav-item>
                 <router-link class="grademate-nav-link" to="/problems"># Let's do Math</router-link>
             </b-nav-item>
         </b-navbar-nav>
@@ -55,7 +55,8 @@ export default {
     padding: 1.6rem 1.2rem;
 }
 
-.logo-text {
+.logo-text,
+.logo-text a {
     font: normal normal 700 45px/40px Jua, sans-serif;
     text-shadow: -3px 1px 0 #1f2024;
     -webkit-text-stroke: 1px #1f2024;
@@ -63,7 +64,8 @@ export default {
     display: flex;
     gap: 10px;
     align-items: center;
-
+    color: #ffffff;
+    text-decoration: none;
 }
 .logo-text .grademate-pop {
     font: normal normal bold 30px/40px "Slackey", serif;
@@ -76,6 +78,8 @@ export default {
     color: #ffffff;
     font-weight: 400;
     transition: all 0.25s ease-in-out;
+    cursor: cell;
+    user-select: none;
 }
 .grademate-pop:hover{
     transform: rotate(-8deg);
@@ -104,5 +108,14 @@ export default {
     height: auto;
     left: -9px;
     rotate: 32deg;
+}
+.grademate-nav-link{
+    color: #1f2024;
+    font: normal normal bold 30px/40px "Bahiana", serif;
+    text-decoration: none;
+}
+
+.grademate-nav-link:hover{
+    color: #17ffb3;
 }
 </style>
