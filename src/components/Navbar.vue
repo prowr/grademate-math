@@ -9,7 +9,9 @@
             </b>
         </b-navbar-brand>
         <b-navbar-nav>
-            <b-nav-item class="grademate-nav-link" href="/problems"># Let's do Math</b-nav-item>
+            <b-nav-item class="grademate-nav-link">
+                <router-link class="grademate-nav-link" to="/problems"># Let's do Math</router-link>
+            </b-nav-item>
         </b-navbar-nav>
     </b-navbar>
 </template>
